@@ -1,11 +1,12 @@
 function collect_same_elements(collection_a, object_b) {
-  //在这里写入代码
-  var result = [];
-  collection_b = object_b.value;
-  for(var index in collection_a){
-    if(collection_b.indexOf(collection_a[index]) !== -1){
-      result.push(collection_a[index]);
+    //在这里写入代码
+    var result = [];
+    for (var i = 0; i < collection_a.length; i++) {
+        for (var x = 0; x < object_b.value.length; x++) {
+            if (collection_a[i] === object_b.value[x]) {
+                result.push(collection_a[i])
+            }
+        }
     }
-  }
-  return result;
+    return result;
 }
